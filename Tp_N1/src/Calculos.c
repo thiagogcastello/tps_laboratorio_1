@@ -44,7 +44,7 @@ float CalcularPrecioCredito (float precio)
 float CalcularPrecioBitcoin (float precio)
 {
 	float btc;
-	btc = 4830700.53;
+	btc = 4508394.68;
 	float precioTotal;
 
 	precioTotal = precio / btc;

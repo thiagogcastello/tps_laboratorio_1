@@ -22,6 +22,8 @@ float CalcularPrecioCredito (float precio);
 float CalcularPrecioBitcoin (float precio);
 float CalcularPrecioXunidad (float unidades, float precio);
 float DiferenciaEntreNumeros (float numeroUno, float numeroDos);
+int PrintearMenuInicio(float km, float precioLatam, float precioAeroArg, int flagKm, int flagPreciosVuelos);
+
 
 
 int main(void) {
@@ -65,17 +67,8 @@ int main(void) {
 
 	do{
 		system("cls");
-		printf("1.Ingresar Kilometros.");
-		printf("\n\tKilometros = %.2f km.", kilometros);
-		printf("\n2.Ingresar precio de vuelos.");
-		printf("\n\tPrecio vuelo Latam: $%.2f .", precioLatam);
-		printf("\n\tPrecio vuelo Areolienas Argentinas: $%.2f", precioAeroArg);
-		printf("\n3.Calcular todos los costos. ");
-		printf("\n4.Informar resultados. ");
-		printf("\n5.Carga Forzada de datos. ");
-		printf("\n6.Salir.");
-		printf("\nIngrese una opcion: ");
-		scanf("%d", &opcion);
+		opcion = PrintearMenuInicio(kilometros, precioLatam, precioAeroArg, flagKm, flagPreciosVuelos);
+
 		switch(opcion)
 		{
 			case 1:
@@ -97,7 +90,7 @@ int main(void) {
 				system("cls");
 
 				printf("Se estan cargando los datos...\n\n");
-				Sleep(1000);
+				Sleep(500);
 				kmCargaDatos = VerificarFlagToF(flagKm,"Error en la carga, no se ingresaron los Kms. Ingrese la opcion 1.\n");
 				PreciosCargaDatos = VerificarFlagToF(flagPreciosVuelos, "Error en la carga, no se ingresaron los precios. Ingrese la opcion 2.\n");
 				if(kmCargaDatos == 1 && PreciosCargaDatos == 1)

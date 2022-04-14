@@ -11,14 +11,14 @@
 /// @brief valida si el numero ingresado es mayor a cero
 ///
 /// @param numero
-/// @return
+/// @return flotante
 float ValidarDatoMenorACero(float numero);
 
 /// @fn float PedirDatosValidarMenorCero(char[])
 /// @brief pide un dato numerico con el mensaje que se le ingrese como parametro
 ///
 /// @param mensaje
-/// @return
+/// @return flotante
 float PedirDatosValidarMenorCero(char mensaje[]);
 
 /// @fn int VerificarFlagToF(int, char[])
@@ -26,7 +26,7 @@ float PedirDatosValidarMenorCero(char mensaje[]);
 ///
 /// @param flag
 /// @param mjeError
-/// @return
+/// @return entero
 int VerificarFlagToF (int flag, char mjeError[]);
 
 /// @fn void PrintearMenuDatosCargados(float, float, float, float, float, float, float, float, float, float, float, float)
@@ -46,7 +46,16 @@ int VerificarFlagToF (int flag, char mjeError[]);
 /// @param diferenciaEntrePrecios
 void PrintearMenuDatosCargados(float unidades, float precioUno, float precioDebitoUno, float precioCreditoUno, float precioBtcUno, float precioUnidadUno, float precioDos, float precioDebitoDos,float precioCreditoDos, float precioBtcDos,float precioUnidadDos, float diferenciaEntrePrecios);
 
-
+/// @fn int PrintearMenuInicio(float, float, float, int, int)
+/// @brief
+///
+/// @param km
+/// @param precioLatam
+/// @param precioAeroArg
+/// @param flagKm
+/// @param flagPreciosVuelos
+/// @return entero
+int PrintearMenuInicio(float km, float precioLatam, float precioAeroArg, int flagKm, int flagPreciosVuelos);
 
 
 
