@@ -111,7 +111,7 @@ int main(void) {
 					precioCreditoDos = CalcularPrecioCredito(precioAeroArg);
 					precioBtcDos = CalcularPrecioBitcoin(precioAeroArg);
 					precioUnidadDos = CalcularPrecioXunidad(kilometros, precioAeroArg);
-					diferenciaEntrePrecios = DiferenciaEntreNumeros(precioAeroArg, precioAeroArg);
+					diferenciaEntrePrecios = DiferenciaEntreNumeros(precioLatam, precioAeroArg);
 
 					printf("Carga realizada con exito.\n");
 				}
