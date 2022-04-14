@@ -15,7 +15,7 @@
 #define precioArgCF 162965
 #define precioLatamCF 159339
 
-float PedirDatosValidarMenorCero(char mensaje[]);
+float PedirDatosValidarMayorCero(char mensaje[]);
 int VerificarFlagToF (int flag, char mjeError[]);
 float CalcularPrecioDebito(float precio);
 float CalcularPrecioCredito (float precio);
@@ -74,15 +74,15 @@ int main(void) {
 			case 1:
 				system("cls");
 
-				kilometros = PedirDatosValidarMenorCero("Ingrese los Kms: \n");
+				kilometros = PedirDatosValidarMayorCero("Ingrese los Kms: \n");
 				flagKm = 1;
 				flagCargaDatos = 0;
 				break;
 			case 2:
 				system("cls");
 
-				precioLatam = PedirDatosValidarMenorCero("Ingrese El precio del vuelo en Aeroliea Latam: $\n");
-				precioAeroArg = PedirDatosValidarMenorCero("Ingrese El precio del vuelo en Aerolineas Argentinas: $\n");
+				precioLatam = PedirDatosValidarMayorCero("Ingrese El precio del vuelo en Aeroliea Latam: $\n");
+				precioAeroArg = PedirDatosValidarMayorCero("Ingrese El precio del vuelo en Aerolineas Argentinas: $\n");
 				flagPreciosVuelos = 1;
 				flagCargaDatos = 0;
 				break;

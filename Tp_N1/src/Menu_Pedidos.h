@@ -12,14 +12,14 @@
 ///
 /// @param numero
 /// @return flotante
-float ValidarDatoMenorACero(float numero);
+float ValidarDatoMayorACero(float numero);
 
 /// @fn float PedirDatosValidarMenorCero(char[])
 /// @brief pide un dato numerico con el mensaje que se le ingrese como parametro
 ///
 /// @param mensaje
 /// @return flotante
-float PedirDatosValidarMenorCero(char mensaje[]);
+float PedirDatosValidarMayorCero(char mensaje[]);
 
 /// @fn int VerificarFlagToF(int, char[])
 /// @brief verifica si una flag es V o F

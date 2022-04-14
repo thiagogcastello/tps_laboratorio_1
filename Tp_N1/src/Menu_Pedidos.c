@@ -4,27 +4,27 @@
 
 #include "Calculos.h"
 
-float PedirDatosValidarMenorCero(char mensaje[]);
-float ValidarDatoMenorACero(float numero);
+float PedirDatosValidarMayorCero(char mensaje[]);
+float ValidarDatoMayorACero(float numero);
 int VerificarFlagToF (int flag, char mjeError[]);
 void PrintearMenuDatosCargados(float unidades, float precioUno, float precioDebitoUno, float precioCreditoUno, float precioBtcUno, float precioUnidadUno, float precioDos, float precioDebitoDos,float precioCreditoDos, float precioBtcDos,float precioUnidadDos, float diferenciaEntrePrecios);
 
 
 
-float PedirDatosValidarMenorCero(char mensaje[])
+float PedirDatosValidarMayorCero(char mensaje[])
 {
 	float numero;
 	printf(mensaje);
 	scanf("%f", &numero);
-	numero = ValidarDatoMenorACero(numero);
+	numero = ValidarDatoMayorACero(numero);
 	return numero;
 }
 
-float ValidarDatoMenorACero(float numero)
+float ValidarDatoMayorACero(float numero)
 {
-	while(numero<0)
+	while(numero<1)
 	{
-		printf("Error. Ingrese un valor mayor a 0:");
+		printf("Error. Ingrese un valor mayor a 1:");
 		scanf("%f", &numero);
 	}
 	return numero;
