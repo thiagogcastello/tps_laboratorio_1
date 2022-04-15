@@ -11,21 +11,21 @@
 /// @brief calcula el precio total con el descuento del uso de debito.
 ///
 /// @param precio
-/// @return
+/// @return el precio total pagando en debito
 float CalcularPrecioDebito(float precio);
 
 /// @fn float CalcularPrecioCredito(float)
 /// @brief calcula el precio total con la recarga del uso de tarjetas de credito
 ///
 /// @param precio
-/// @return
+/// @return el precio total pagando en credito
 float CalcularPrecioCredito (float precio);
 
 /// @fn float CalcularPrecioBitcoin(float)
 /// @brief
 ///
 /// @param precio
-/// @return
+/// @return el precio total pagando en bitcoin
 float CalcularPrecioBitcoin (float precio);
 
 /// @fn float CalcularPrecioXunidad(float, float)
@@ -33,7 +33,7 @@ float CalcularPrecioBitcoin (float precio);
 ///
 /// @param unidades
 /// @param precio
-/// @return
+/// @return el valor por unidad
 float CalcularPrecioXunidad (float unidades, float precio);
 
 /// @fn float DiferenciaEntreNumeros(float, float)
@@ -41,7 +41,7 @@ float CalcularPrecioXunidad (float unidades, float precio);
 ///
 /// @param numeroUno
 /// @param numeroDos
-/// @return
+/// @return la diferencia entre los dos parametros ingresados, siempre con signo positivo
 float DiferenciaEntreNumeros (float numeroUno, float numeroDos);
 
 

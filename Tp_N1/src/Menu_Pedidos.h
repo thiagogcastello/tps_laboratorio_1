@@ -11,14 +11,14 @@
 /// @brief valida si el numero ingresado es mayor a cero
 ///
 /// @param numero
-/// @return flotante
+/// @return retorna el numero validado mayor a cero
 float ValidarDatoMayorACero(float numero);
 
 /// @fn float PedirDatosValidarMenorCero(char[])
-/// @brief pide un dato numerico con el mensaje que se le ingrese como parametro
+/// @brief pide un dato numerico con el mensaje que se le ingrese como parametro y lo devuelve validado en el rango
 ///
 /// @param mensaje
-/// @return flotante
+/// @return retorna el dato pedido, validado mayor a cero
 float PedirDatosValidarMayorCero(char mensaje[]);
 
 /// @fn int VerificarFlagToF(int, char[])
@@ -26,7 +26,7 @@ float PedirDatosValidarMayorCero(char mensaje[]);
 ///
 /// @param flag
 /// @param mjeError
-/// @return entero
+/// @return 1 en caso de verdadero, 0 en caso de falso
 int VerificarFlagToF (int flag, char mjeError[]);
 
 /// @fn void PrintearMenuDatosCargados(float, float, float, float, float, float, float, float, float, float, float, float)
@@ -54,7 +54,7 @@ void PrintearMenuDatosCargados(float unidades, float precioUno, float precioDebi
 /// @param precioAeroArg
 /// @param flagKm
 /// @param flagPreciosVuelos
-/// @return entero
+/// @return la opcion selecionada del menu
 int PrintearMenuInicio(float km, float precioLatam, float precioAeroArg, int flagKm, int flagPreciosVuelos);
 
 
