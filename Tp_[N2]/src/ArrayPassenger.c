@@ -1,39 +1,99 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ArrayPassenger.h"
-#include "imput.h"
+#include "input.h"
+
+static int IdIncremental = 162;
+static int eAlbum_ObtenerID();
+static int eAlbum_ObtenerID()
+{
+	return IdIncremental++;
+}
+
 
 int InitPassenger(ePassenger passenger[], int tam)
 {
+	int retorno=-1;
 	int i;
-	for(i=0; i<tam; i++)
+	if(passenger != NULL)
 	{
-		passenger[i].isEmpty=0;
+		for(i=0;i<tam;i++)
+		{
+			passenger[i].isEmpty=0;
+		}
+		retorno = 0;
 	}
-
-	return 0;
+	return retorno;
 }
 
-int addPassenger(ePassenger list, int len, int id, char name[],char
+int passenger_BuscarEspacioLibre(ePassenger passenger[], int tam)
+{
+	int retorno=-1;
+	int i;
+
+	if(passenger != NULL)
+	{
+		if(tam>=0)
+		{
+			for(i=0;i<tam;i++)
+			{
+				if(passenger[i].isEmpty == 0)
+				{
+					retorno=i;
+					break;
+				}
+			}
+		}
+	}
+	return retorno;
+}
+
+
+int addPassenger(ePassenger list[], int len, int id, char name[],char
 lastName[],float price,int typePassenger, char flycode[])
 {
+	int rtn = -1;
 
-	return -1;
+	if(list!=NULL && len>=0)
+	{
+		passenger_BuscarEspacioLibre(list,len);
+	}
+
+	return rtn;
 }
 
 
-
-void cargarPasajero(ePassenger array[], int tamanho)
+int findPassengerById(ePassenger list[], int len, int id)
 {
-	int i;
+	int rtn = -1;
 
-	for (i=0; i < tamanho; i++)
+	if(list!=NULL && len>=0)
 	{
-		PedirArraydeChar(array[i].name, "Ingrese el nombre del pasajero: ");
-		PedirArraydeChar(array[i].lastName, "\nIngrese el apellido del pasajero:");
-		array[i].price = PedirIntMayorCero("\nIngrese el precio del vuelo: ");
-		PedirArraydeChar(array[i].flycode, "\nIngrese el codigo de vuelo (codigo de 10 caracteres): ");
-		array[i].isEmpty = 1;
+		for(int i = 0;i<len;i++)
+		{
+			if(list[i].id == id)
+			{
+				rtn = id;
+			}
+		}
 	}
+		return rtn;
+}
 
+int removePassenger(ePassenger list[], int len, int id)
+{
+	int rtn = -1;
+
+	if(list!=NULL && len>=0)
+	{
+		for(int i = 0;i<len;i++)
+		{
+			if(list[i].id == id)
+			{
+				list[i].isEmpty=0;
+				rtn=0;
+			}
+		}
+	}
+		return rtn;
 }

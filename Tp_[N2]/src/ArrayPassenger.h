@@ -23,6 +23,6 @@ typedef struct
 
 int InitPassenger(ePassenger passenger[], int tam);
 
-void cargarPasajero(ePassenger array[], int tamanho);
+int cargarPasajero(ePassenger array[], int tamanho);
 
 #endif /* ARRAYPASSENGER_H_ */
