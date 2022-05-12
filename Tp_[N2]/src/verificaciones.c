@@ -10,12 +10,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-int VerificarPositivoNegativo (int numero);
-int VerificarParidad (int numero);
-int VerificarMaximoMinimo (int maximo,int minimo, int numero);
-
-
-
+#include <string.h>
+#include <ctype.h>
+#include "verificaciones.h"
 int VerificarPositivoNegativo (int numero)
 {
 	int retorno;
@@ -47,7 +44,7 @@ int VerificarParidad (int numero)
 int VerificarMaximoMinimo (int maximo,int minimo, int numero)
 {
 
-	if(numero > maximo || numero < minimo)
+	while(numero > maximo || numero < minimo)
 	{
 		printf("Error. Ingrese un numero entre %d y %d:", maximo, minimo);
 		scanf("%d", &numero);
@@ -64,4 +61,32 @@ void VerificarDistintoCero (int array[], int posicion)
 	}
 }
 
+int validar_cadena(char array[])
+{
+	int rtn=0;
+	int longitud = strlen(array);
+
+	if(longitud > 0)
+	{
+		for(int i=0;i<strlen(array);i++)
+		{
+			if(isspace(array[i]) != 0)
+			{
+
+			}else{
+				if(isalpha(array[i]) == 0)
+				{
+					rtn=1;
+				}
+			}
+		}
+	}else
+	{
+		rtn = 1;
+	}
+	if(rtn == 1)
+		printf("\nError. Se ha ingresado un caracter no valido.");
+
+	return rtn;
+}
 

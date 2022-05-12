@@ -4,13 +4,6 @@
 
 #include "Calculos.h"
 
-float PedirDatosValidarMayorCero(char mensaje[]);
-float ValidarDatoMayorACero(float numero);
-int VerificarFlagToF (int flag, char mjeError[]);
-void PrintearMenuDatosCargados(float unidades, float precioUno, float precioDebitoUno, float precioCreditoUno, float precioBtcUno, float precioUnidadUno, float precioDos, float precioDebitoDos,float precioCreditoDos, float precioBtcDos,float precioUnidadDos, float diferenciaEntrePrecios);
-
-
-
 float PedirDatosValidarMayorCero(char mensaje[])
 {
 	float numero;
